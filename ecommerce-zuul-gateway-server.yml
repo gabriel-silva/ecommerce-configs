@@ -1,15 +1,6 @@
 server:
   port: 3999
-
-zuul:
-  prefix: /ecommerce
-  ignoredServices: '*'
-  routes:
-    ecommerce-category-server:
-      path: /category/**
-      serviceId: ecommerce-category-server
-      stripPrefix: false
-
+  
 eureka:
   instance:
     hostname: localhost
@@ -30,3 +21,12 @@ eureka:
 #       defaultZone: https://ecommerce-eureka-server.herokuapp.com/eureka/
 #   server:
 #     wait-time-in-ms-when-sync-empty: 3000
+
+zuul:
+  prefix: /ecommerce
+  ignoredServices: '*'
+  routes:
+    ecommerce-category-server:
+      path: /category/**
+      serviceId: ecommerce-category-server
+      stripPrefix: false
