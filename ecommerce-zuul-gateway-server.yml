@@ -23,7 +23,7 @@ eureka:
 #     wait-time-in-ms-when-sync-empty: 3000
 
 zuul:
-  prefix: /api
+  prefix: /ecommerce
   ignoredServices: '*'
   routes:
     ecommerce-category-server:
