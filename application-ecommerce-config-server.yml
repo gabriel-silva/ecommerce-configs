@@ -1,0 +1,20 @@
+#server:
+#  port: 4000
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/gabriel-silva/ecommerce-configs
+          username: git-username
+          password: git-password
+
+#spring:
+#  profiles:
+#    include: native
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: classpath:/config-repo
