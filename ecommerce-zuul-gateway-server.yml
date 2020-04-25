@@ -29,4 +29,4 @@ zuul:
     ecommerce-category-server:
       path: /category/**
       serviceId: ecommerce-category-server
-      stripPrefix: true
+      stripPrefix: false
