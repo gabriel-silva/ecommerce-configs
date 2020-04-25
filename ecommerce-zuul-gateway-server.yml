@@ -3,7 +3,7 @@ server:
 
 zuul:
   prefix: /ecommerce
-  ignored-services: *
+  ignored-services: '*'
   routes:
     category:
       path: /category/**
