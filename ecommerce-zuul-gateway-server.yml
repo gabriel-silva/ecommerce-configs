@@ -3,12 +3,12 @@ server:
 
 zuul:
   prefix: /ecommerce
-  ignored-services: '*'
+  ignoredServices: '*'
   routes:
-    category:
+    ecommerce-category-server:
       path: /category/**
       serviceId: ecommerce-category-server
-      strip-prefix: false
+      stripPrefix: false
 
 eureka:
   instance:
