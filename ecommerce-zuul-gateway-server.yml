@@ -1,0 +1,32 @@
+server:
+  port: 3999
+
+zuul:
+  prefix: /ecommerce
+  ignored-services: *
+  routes:
+    category:
+      path: /category/**
+      serviceId: ecommerce-category-server
+      strip-prefix: false
+
+eureka:
+  instance:
+    hostname: localhost
+    port: 4001
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 3000
+
+# eureka:
+#   client:
+#     registerWithEureka: true
+#     fetchRegistry: false
+#     serviceUrl:
+#       defaultZone: https://ecommerce-eureka-server.herokuapp.com/eureka/
+#   server:
+#     wait-time-in-ms-when-sync-empty: 3000
