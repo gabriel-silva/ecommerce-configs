@@ -1,15 +1,24 @@
 server:
   port: 4002
 
+#eureka:
+#  instance:
+#    hostname: localhost
+#    port: 4001
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: false
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+#  server:
+#    wait-time-in-ms-when-sync-empty: 3000
+
 eureka:
-  instance:
-    hostname: localhost
-    port: 4001
   client:
     registerWithEureka: true
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+      defaultZone: https://ecommerce-eureka-server.herokuapp.com/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
