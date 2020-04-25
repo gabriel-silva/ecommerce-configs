@@ -7,7 +7,7 @@ eureka:
     port: 4001
   client:
     registerWithEureka: true
-    fetchRegistry: false
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
   server:
@@ -16,7 +16,7 @@ eureka:
 # eureka:
 #   client:
 #     registerWithEureka: true
-#     fetchRegistry: false
+#     fetchRegistry: true
 #     serviceUrl:
 #       defaultZone: https://ecommerce-eureka-server.herokuapp.com/eureka/
 #   server:
