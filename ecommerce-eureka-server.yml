@@ -17,6 +17,6 @@ eureka:
     registerWithEureka: true
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: https://ecommerce-eureka-server.herokuapp.com/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
